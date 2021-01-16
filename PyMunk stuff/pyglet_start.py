@@ -41,7 +41,19 @@ segment_body = pymunk.Body(mass,segment_moment)
 segment_body.position = 400,300
 segment_shape = pymunk.Segment(segment_body,(0,0),(0,400),2)
 
-space.add(circle_body, circle_shape,body,poly,segment_body,segment_shape)
+triangle_shape = pymunk.Poly(None,((0,0),(100,0),(50,100)))
+triangle_moment = pymunk.moment_for_poly(mass,triangle_shape.get_vertices())
+traingle_body = pymunk.Body(mass,triangle_moment)
+traingle_body.position = 700,700
+triangle_shape.body = traingle_body
+
+penta_shape = pymunk.Poly(None,((0,0),(100,0),(150,100),(50,200),(-50,100)))
+penta_moment = pymunk.moment_for_poly(mass,penta_shape.get_vertices())
+penta_body = pymunk.Body(mass,penta_moment)
+penta_body.position = 900,700
+penta_shape.body = penta_body
+
+space.add(circle_body, circle_shape,body,poly,segment_body,segment_shape,traingle_body,triangle_shape,penta_body,penta_shape)
 
 @window.event
 def on_draw():
