@@ -62,7 +62,7 @@ def update(dt):#param is time
     space.step(dt)
 
     for index,sprite_ in enumerate(sprites_click):
-        sprite_.rotation = degrees(-space.bodies[index].angle) #index +1 as we have already created one body and shape outside of click function as default
+        sprite_.rotation = degrees(-space.bodies[index].angle) 
         sprite_.position = space.bodies[index].position
 
         for shape in space.shapes:
