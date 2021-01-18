@@ -12,14 +12,6 @@ space.gravity = 0,-1000 #gravity for x and y directions
 
 sprite_batch = pyglet.graphics.Batch()
 
-'''Body types: (default is DYNAMIC)
-    DYNAMIC: affected by gravity and other forces (ball,player,enemies etc)
-    KINEMATIC: Not affected by gravity or other forces, but can be moved (platforms,doors)
-    STATIC: Not affected by gravity or other forces, and cannot be moved (ground,building, immovable object)
-
-   Moment of Inertia: How much a body will resist rotation. Large value: resists rotation/angular acceleration more'''
-
-
 mass = 1
 radius = 30
 
