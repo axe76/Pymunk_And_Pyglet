@@ -64,6 +64,7 @@ def on_draw():
 def update(dt):#param is time
     space.step(dt)
 
+#pyglet.app.exit()
 
 if __name__=='__main__':
     pyglet.clock.schedule_interval(update, 1.0/60) #update method called every 1/60th of a second
